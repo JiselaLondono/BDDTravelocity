@@ -1,19 +1,35 @@
-plugins {
-    id 'java'
-}
+
 
 group 'com.pruebadevco.travelocity'
 version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin:  'net.serenity-bdd.aggregator'
+
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
 
 repositories {
     mavenCentral()
 }
 
-dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+buildscript{
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath('net.serenity-bdd:serenity-gradle-plugin:2.0.23')
+    }
 }
 
-test {
-    useJUnitPlatform()
+dependencies {
+    compile group: 'net.serenity-bdd', name: 'serenity-core', version: '2.0.15'
+    compile group: 'net.serenity-bdd', name: 'serenity-cucumber', version: '1.9.20'
+    compile group: 'net.serenity-bdd', name: 'serenity-screenplay', version: '2.0.15'
+    compile group: 'net.serenity-bdd', name: 'serenity-junit', version: '2.0.15'
+    compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.25'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
 }
