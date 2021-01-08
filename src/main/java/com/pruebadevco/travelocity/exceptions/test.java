@@ -1,4 +1,3 @@
 package com.pruebadevco.travelocity.exceptions;
 
-public class test {
-}
+public class test {}

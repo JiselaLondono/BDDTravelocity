@@ -1,4 +1,3 @@
 package com.pruebadevco.travelocity.questions;
 
-public class test {
-}
+public class test {}

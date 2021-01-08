@@ -3,20 +3,32 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+    maven {
+        url "https://plugins.gradle.org/m2/"
+    }
+    jcenter()
 }
 
 buildscript{
     repositories {
         mavenCentral()
+        mavenCentral()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+        google()
+        jcenter()
     }
     dependencies {
         classpath('net.serenity-bdd:serenity-gradle-plugin:2.1.5')
         classpath('net.serenity-bdd:serenity-single-page-report:2.1.5')
+        classpath ('gradle.plugin.com.github.sherter.google-java-format:google-java-format-gradle-plugin:0.8')
     }
 }
 
 apply plugin: 'java'
 apply plugin: 'idea'
+apply plugin: 'com.github.sherter.google-java-format'
 apply plugin: 'net.serenity-bdd.aggregator'
 
 tasks.withType(JavaCompile) {
@@ -41,5 +53,6 @@ dependencies {
     implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.11.2'
 }
 
+compileJava.dependsOn 'googleJavaFormat'
 gradle.startParameter.continueOnFailure = true
 test.finalizedBy(aggregate)
