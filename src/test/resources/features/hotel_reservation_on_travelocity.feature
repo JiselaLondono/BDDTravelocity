@@ -5,8 +5,8 @@
     I
     To
 
-  Scenario Outline: Prueba1
-  Given Jisela quiere hacer uso del servicio de reservas de <prueba> presente en Travelocity
+  Scenario: Prueba1
+  Given that Jisela wants to use the Hotels reservation service on Travelocity
   #When ella elige de manera adicional los servicios de
   #Vuelos
   #And ella indica completamente la información en la que está interesada buscar
@@ -16,12 +16,3 @@
   #And elige el vuelo de salida con prioridad de precio (menor)
   #And elige el vuelo de regreso con prioridad de precio (menor)
   #Then se debe presentar un resumen con la información de los vuelos y hotel elegidos
-
-  Examples:
-    |prueba|
-    |Hotels|
-    |Flights|
-    |Cars   |
-    |Packages|
-    |Things to do|
-    |Cruises     |
