@@ -19,6 +19,8 @@ public class HotelReservation extends Reservation {
     super(hotelReservationData);
     this.checkInDate = hotelReservationData.get("checkInDate");
     this.checkOutDate = hotelReservationData.get("checkOutDate");
+    this.addAFlight = Boolean.parseBoolean(hotelReservationData.get("addAFlight"));
+    this.addACar = Boolean.parseBoolean(hotelReservationData.get("addACar"));
   }
 
   public String getCheckInDate() {

@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 
 public final class HotelSearchFilters {
   public static final Target DESTINATION_PLACE_BUTTON =
-      Target.the("").locatedBy("//div[@id='location-field-destination-menu']//button");
+      Target.the("").located(By.id("location-field-destination-menu"));
   public static final Target PLACE_SEARCH_TEXT =
       Target.the("")
           .locatedBy(
@@ -25,4 +25,12 @@ public final class HotelSearchFilters {
   public static final Target END_DATE_BUTTON = Target.the("").located(By.id("d2-btn"));
   public static final Target APPLY_DATE_BUTTON =
       Target.the("").locatedBy("//button[@data-stid='apply-date-picker']/span");
+  public static final Target ADD_FLIGHT_CHECKBOX =
+      Target.the("").located(By.id("add-flight-switch"));
+  public static final Target ADD_CAR_CHECKBOX = Target.the("").located(By.id("add-car-switch"));
+  public static final Target DEPARTURE_PLACE_BUTTON =
+      Target.the("").located(By.id("location-field-origin-menu"));
+  public static final Target ADD_TRAVELERS_BUTTON = Target.the("").located(By.id("adaptive-menu"));
+  public static final Target SEARCH_BUTTON =
+      Target.the("").locatedBy("//button[@data-testid='submit-button' and text()='Search']");
 }
