@@ -1,6 +1,6 @@
 package com.pruebadevco.travelocity.questions;
 
-import static com.pruebadevco.travelocity.userinterface.HotelInformationAvailable.HOTEL_NAME;
+import static com.pruebadevco.travelocity.userinterface.HotelInformation.HOTEL_NAME;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;

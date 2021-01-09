@@ -23,7 +23,7 @@ public class GeneralStepDefinition {
     OnStage.setTheStage(Cast.whereEveryoneCan(BrowseTheWeb.with(herBrowser)));
   }
 
-  @Given("that {word} wants to use the {word} reservation service on Travelocity")
+  @Given("that {word} wants to use the {string} reservation service on Travelocity")
   public void selectReservationOption(String actor, String reservationOption) {
     theActorCalled(actor)
         .wasAbleTo(Open.url(TRAVELOCITY_URL), SelectReservationOption.named(reservationOption));

@@ -76,9 +76,9 @@ public class FlightReservation extends Reservation {
   }
 
   public static List<FlightReservation> getFlightReservations(
-      List<Map<String, String>> hotelReservationList) {
+      List<Map<String, String>> flightReservationList) {
     List<FlightReservation> flightReservations = new ArrayList<>();
-    hotelReservationList.forEach(
+    flightReservationList.forEach(
         flightReservation -> flightReservations.add(new FlightReservation(flightReservation)));
     return flightReservations;
   }
