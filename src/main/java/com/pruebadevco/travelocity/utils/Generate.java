@@ -1,12 +1,14 @@
 package com.pruebadevco.travelocity.utils;
 
 import static com.pruebadevco.travelocity.utils.enums.CsvFileNames.CAR_RESERVATION;
+import static com.pruebadevco.travelocity.utils.enums.CsvFileNames.CRUISE_RESERVATION;
 import static com.pruebadevco.travelocity.utils.enums.CsvFileNames.FLIGHT_RESERVATION;
 import static com.pruebadevco.travelocity.utils.enums.CsvFileNames.HOTEL_RESERVATION;
 import static com.pruebadevco.travelocity.utils.enums.CsvFileNames.THINGS_TO_DO_RESERVATION;
 import static com.pruebadevco.travelocity.utils.enums.ErrorMessages.RESOURCE_NOT_FOUND_ERROR;
 
 import com.pruebadevco.travelocity.models.CarReservation;
+import com.pruebadevco.travelocity.models.CruiseReservation;
 import com.pruebadevco.travelocity.models.FlightReservation;
 import com.pruebadevco.travelocity.models.HotelReservation;
 import com.pruebadevco.travelocity.models.ThingsToDoReservation;
@@ -65,5 +67,18 @@ public class Generate {
       throw new IOException(RESOURCE_NOT_FOUND_ERROR.getMessage(), e);
     }
     return thingsToDoReservation;
+  }
+
+  public static CruiseReservation getCruiseReservationData(String filter) throws IOException {
+    CruiseReservation cruiseReservation;
+    try {
+      cruiseReservation =
+          CruiseReservation.getCruiseReservations(
+                  UtilidadesCSV.obtenerDatosPrueba(CRUISE_RESERVATION.getValue(), filter))
+              .get(0);
+    } catch (IOException e) {
+      throw new IOException(RESOURCE_NOT_FOUND_ERROR.getMessage(), e);
+    }
+    return cruiseReservation;
   }
 }
