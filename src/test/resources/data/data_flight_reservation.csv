@@ -1,0 +1,2 @@
+id;idFiltro;flightType;destinationPlace;departurePlace;startDate;endDate;addAHotel;addACar;checkInDate;checkOutDate;preferredClass
+1;prueba;Roundtrip;Medellin (MDE - Jose Maria Cordova Intl.);Bogota (BOG - El Dorado Intl.);Mar 2, 2021;Mar 7, 2021;false;false;;;Premium economy

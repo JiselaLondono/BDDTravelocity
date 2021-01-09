@@ -22,18 +22,6 @@ public class Utilities {
     return c.get(Calendar.MONTH) + 1;
   }
 
-  public static int getMonthFromTextCalendar(String monthInformation, String format) {
-    String[] month = monthInformation.split(" ");
-    Calendar cal = Calendar.getInstance();
-    try {
-      Date date = new SimpleDateFormat(format).parse(month[0]);
-      cal.setTime(date);
-    } catch (ParseException e) {
-      e.printStackTrace();
-    }
-    return cal.get(Calendar.MONTH) + 1;
-  }
-
   public static String getCurrentDate(String format) {
     Date date = new Date();
     Calendar calendar = new GregorianCalendar();
