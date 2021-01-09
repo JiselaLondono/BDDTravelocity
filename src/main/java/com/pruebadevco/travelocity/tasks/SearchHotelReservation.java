@@ -1,5 +1,8 @@
 package com.pruebadevco.travelocity.tasks;
 
+import static com.pruebadevco.travelocity.userinterface.GeneralFilters.CHECKIN_DATE_BUTTON;
+import static com.pruebadevco.travelocity.userinterface.GeneralFilters.CHECKOUT_DATE_BUTTON;
+import static com.pruebadevco.travelocity.userinterface.GeneralFilters.SEARCH_BUTTON;
 import static com.pruebadevco.travelocity.userinterface.HotelSearchFilters.ADD_CAR_CHECKBOX;
 import static com.pruebadevco.travelocity.userinterface.HotelSearchFilters.ADD_FLIGHT_CHECKBOX;
 import static com.pruebadevco.travelocity.userinterface.HotelSearchFilters.DEPARTURE_PLACE_BUTTON;
@@ -28,7 +31,9 @@ public class SearchHotelReservation implements Task {
     actor.attemptsTo(
         Click.on(DESTINATION_PLACE_BUTTON),
         SearchPlace.named(hotelReservation.getDestinationPlace()),
+        Click.on(CHECKIN_DATE_BUTTON),
         SelectStartDate.onTheCalendar(hotelReservation.getCheckInDate()),
+        Click.on(CHECKOUT_DATE_BUTTON),
         SelectEndDate.onTheCalendar(
             hotelReservation.getCheckOutDate(), hotelReservation.getCheckInDate()),
         Check.whether(hotelReservation.isAddAFlight())
@@ -36,7 +41,8 @@ public class SearchHotelReservation implements Task {
                 Click.on(ADD_FLIGHT_CHECKBOX),
                 Click.on(DEPARTURE_PLACE_BUTTON),
                 SearchPlace.named(hotelReservation.getDeparturePlace())),
-        Check.whether(hotelReservation.isAddACar()).andIfSo(Click.on(ADD_CAR_CHECKBOX)));
+        Check.whether(hotelReservation.isAddACar()).andIfSo(Click.on(ADD_CAR_CHECKBOX)),
+        Click.on(SEARCH_BUTTON));
   }
 
   public static SearchHotelReservation withTheFollowingInformation(

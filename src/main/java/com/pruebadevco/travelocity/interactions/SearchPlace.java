@@ -1,7 +1,7 @@
 package com.pruebadevco.travelocity.interactions;
 
-import static com.pruebadevco.travelocity.userinterface.HotelSearchFilters.PLACE_SEARCH_LIST;
-import static com.pruebadevco.travelocity.userinterface.HotelSearchFilters.PLACE_SEARCH_TEXT;
+import static com.pruebadevco.travelocity.userinterface.GeneralFilters.PLACE_SEARCH_LIST;
+import static com.pruebadevco.travelocity.userinterface.GeneralFilters.PLACE_SEARCH_TEXT;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 

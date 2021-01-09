@@ -1,20 +1,38 @@
 package com.pruebadevco.travelocity.models;
 
-public class FlightReservation /* extends Reservation*/ {
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
-  private String typeOfFlight;
+public class FlightReservation extends Reservation {
+
+  private String flightType;
   private String checkInDate;
   private String checkOutDate;
   private boolean addAHotel;
   private boolean addACar;
-  private String flightClass;
+  private String preferredClass;
 
-  public String getTypeOfFlight() {
-    return typeOfFlight;
+  public FlightReservation() {
+    super();
   }
 
-  public void setTypeOfFlight(String typeOfFlight) {
-    this.typeOfFlight = typeOfFlight;
+  private FlightReservation(Map<String, String> flightReservationData) {
+    super(flightReservationData);
+    this.flightType = flightReservationData.get("flightType");
+    this.checkInDate = flightReservationData.get("checkInDate");
+    this.checkOutDate = flightReservationData.get("checkOutDate");
+    this.addAHotel = Boolean.parseBoolean(flightReservationData.get("addAHotel"));
+    this.addACar = Boolean.parseBoolean(flightReservationData.get("addACar"));
+    this.preferredClass = flightReservationData.get("preferredClass");
+  }
+
+  public String getFlightType() {
+    return flightType;
+  }
+
+  public void setFlightType(String flightType) {
+    this.flightType = flightType;
   }
 
   public String getCheckInDate() {
@@ -49,11 +67,19 @@ public class FlightReservation /* extends Reservation*/ {
     this.addACar = addACar;
   }
 
-  public String getFlightClass() {
-    return flightClass;
+  public String getPreferredClass() {
+    return preferredClass;
   }
 
-  public void setFlightClass(String flightClass) {
-    this.flightClass = flightClass;
+  public void setPreferredClass(String preferredClass) {
+    this.preferredClass = preferredClass;
+  }
+
+  public static List<FlightReservation> getFlightReservations(
+      List<Map<String, String>> hotelReservationList) {
+    List<FlightReservation> flightReservations = new ArrayList<>();
+    hotelReservationList.forEach(
+        flightReservation -> flightReservations.add(new FlightReservation(flightReservation)));
+    return flightReservations;
   }
 }
