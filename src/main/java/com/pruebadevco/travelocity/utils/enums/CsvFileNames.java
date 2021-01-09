@@ -3,7 +3,8 @@ package com.pruebadevco.travelocity.utils.enums;
 public enum CsvFileNames {
   HOTEL_RESERVATION("hotel_reservation"),
   FLIGHT_RESERVATION("flight_reservation"),
-  CAR_RESERVATION("car_reservation");
+  CAR_RESERVATION("car_reservation"),
+  THINGS_TO_DO_RESERVATION("things_to_do");
 
   private String value;
 
