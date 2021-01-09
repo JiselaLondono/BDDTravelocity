@@ -1,3 +1,3 @@
 id;idFiltro;carServiceType;destinationPlace;departurePlace;startDate;endDate;startTime;endTime;aarpMemberRateIncluded;bookRoundtrip;haveDiscountCode;preferredBrand;discountType
 1;for airport transportation;Airport transportation;The Grace Hotel;Bogota (BOG - El Dorado Intl.);Mar 5, 2021;Mar 6, 2021;10:00;13:00;;true;;
-1;for rent it;Rental cars;Medellin (MDE - Jose Maria Cordova Intl.);Medellin (MDE - Jose Maria Cordova Intl.);Jan 25, 2021;Jan 27, 2021;10:30;11:45;true;;true;Hertz;I don't have a code
+2;for rent it;Rental cars;Medellin (MDE - Jose Maria Cordova Intl.);Medellin (MDE - Jose Maria Cordova Intl.);Ene 25, 2021;Ene 27, 2021;10:30;11:45;true;;true;Hertz;I don't have a code

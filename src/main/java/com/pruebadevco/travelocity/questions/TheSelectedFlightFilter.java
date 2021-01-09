@@ -8,10 +8,10 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import org.openqa.selenium.By;
 
-public class TheSearchFilter implements Question<Boolean> {
+public class TheSelectedFlightFilter implements Question<Boolean> {
   private String option;
 
-  public TheSearchFilter(String option) {
+  public TheSelectedFlightFilter(String option) {
     this.option = option;
   }
 
@@ -21,7 +21,6 @@ public class TheSearchFilter implements Question<Boolean> {
         AVAILABLE_FLIGHTS
             .resolveAllFor(actor)
             .subList(0, AVAILABLE_FLIGHTS.resolveAllFor(actor).size());
-
     for (WebElementFacade availableFlight : availableFlights) {
       if (!option.equals(
           availableFlight
@@ -30,15 +29,14 @@ public class TheSearchFilter implements Question<Boolean> {
         return false;
       }
     }
-
     return true;
   }
 
-  public static TheSearchFilter named(String option) {
-    return new TheSearchFilter(option);
+  public static TheSelectedFlightFilter named(String option) {
+    return new TheSelectedFlightFilter(option);
   }
 
-  public TheSearchFilter wasAppliedInTheFlightList() {
+  public TheSelectedFlightFilter wasAppliedInTheFlightList() {
     return this;
   }
 }

@@ -8,7 +8,7 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import com.pruebadevco.travelocity.exceptions.SearchFilterNotAppliedException;
 import com.pruebadevco.travelocity.interactions.SelectFlightFilter;
 import com.pruebadevco.travelocity.models.FlightReservation;
-import com.pruebadevco.travelocity.questions.TheSearchFilter;
+import com.pruebadevco.travelocity.questions.TheSelectedFlightFilter;
 import com.pruebadevco.travelocity.tasks.SearchFlightReservation;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -32,10 +32,10 @@ public class FlightReservationStepDefinition {
   }
 
   @Then("she should see that the flight list was filtered with the option {string}")
-  public void validateSearchFilter(String option) {
+  public void validateFlightSearchFilter(String option) {
     theActorInTheSpotlight()
         .should(
-            seeThat(TheSearchFilter.named(option).wasAppliedInTheFlightList())
+            seeThat(TheSelectedFlightFilter.named(option).wasAppliedInTheFlightList())
                 .orComplainWith(
                     SearchFilterNotAppliedException.class,
                     String.format(SEARCH_FILTER_NOT_APPLIED_ERROR.getMessage(), option)));
