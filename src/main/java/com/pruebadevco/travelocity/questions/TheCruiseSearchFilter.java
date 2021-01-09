@@ -21,7 +21,6 @@ public class TheCruiseSearchFilter implements Question<Boolean> {
         CRUISES_INFORMATION
             .resolveAllFor(actor)
             .subList(0, CRUISES_INFORMATION.resolveAllFor(actor).size());
-
     for (WebElementFacade availableCruise : availableCruises) {
       if (!availableCruise
           .findElement(By.xpath(".//div[@class='title-on-ship-image']"))
@@ -30,7 +29,6 @@ public class TheCruiseSearchFilter implements Question<Boolean> {
         return false;
       }
     }
-
     return true;
   }
 

@@ -21,7 +21,7 @@ public class Generate {
     try {
       hotelReservationData =
           HotelReservation.getHotelReservations(
-                  UtilidadesCSV.obtenerDatosPrueba(HOTEL_RESERVATION.getValue(), filter))
+                  CsvUtilities.getDataTest(HOTEL_RESERVATION.getValue(), filter))
               .get(0);
     } catch (IOException e) {
       throw new IOException(RESOURCE_NOT_FOUND_ERROR.getMessage(), e);
@@ -34,7 +34,7 @@ public class Generate {
     try {
       flightReservationData =
           FlightReservation.getFlightReservations(
-                  UtilidadesCSV.obtenerDatosPrueba(FLIGHT_RESERVATION.getValue(), filter))
+                  CsvUtilities.getDataTest(FLIGHT_RESERVATION.getValue(), filter))
               .get(0);
     } catch (IOException e) {
       throw new IOException(RESOURCE_NOT_FOUND_ERROR.getMessage(), e);
@@ -47,7 +47,7 @@ public class Generate {
     try {
       carReservationData =
           CarReservation.getCarReservations(
-                  UtilidadesCSV.obtenerDatosPrueba(CAR_RESERVATION.getValue(), filter))
+                  CsvUtilities.getDataTest(CAR_RESERVATION.getValue(), filter))
               .get(0);
     } catch (IOException e) {
       throw new IOException(RESOURCE_NOT_FOUND_ERROR.getMessage(), e);
@@ -61,7 +61,7 @@ public class Generate {
     try {
       thingsToDoReservation =
           ThingsToDoReservation.getThingsToDoReservations(
-                  UtilidadesCSV.obtenerDatosPrueba(THINGS_TO_DO_RESERVATION.getValue(), filter))
+                  CsvUtilities.getDataTest(THINGS_TO_DO_RESERVATION.getValue(), filter))
               .get(0);
     } catch (IOException e) {
       throw new IOException(RESOURCE_NOT_FOUND_ERROR.getMessage(), e);
@@ -74,7 +74,7 @@ public class Generate {
     try {
       cruiseReservation =
           CruiseReservation.getCruiseReservations(
-                  UtilidadesCSV.obtenerDatosPrueba(CRUISE_RESERVATION.getValue(), filter))
+                  CsvUtilities.getDataTest(CRUISE_RESERVATION.getValue(), filter))
               .get(0);
     } catch (IOException e) {
       throw new IOException(RESOURCE_NOT_FOUND_ERROR.getMessage(), e);

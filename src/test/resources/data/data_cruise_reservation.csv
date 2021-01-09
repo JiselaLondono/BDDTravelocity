@@ -1,2 +1,3 @@
-id;idFiltro;destinationPlace;departurePlace;startDate;endDate
-1;prueba;Africa;;Mar 4, 2021;Mar 9, 2021
+id;filterId;destinationPlace;departurePlace;startDate;endDate
+1;to Africa;Africa;;Mar 4, 2021;Mar 9, 2021
+2;to Bahamas;Africa;;Mar 4, 2021;Mar 9, 2021

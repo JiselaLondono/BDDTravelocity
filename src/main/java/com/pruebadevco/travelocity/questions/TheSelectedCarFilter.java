@@ -20,7 +20,6 @@ public class TheSelectedCarFilter implements Question<Boolean> {
   public Boolean answeredBy(Actor actor) {
     List<WebElementFacade> availableCars =
         AVAILABLE_CARS.resolveAllFor(actor).subList(0, AVAILABLE_CARS.resolveAllFor(actor).size());
-
     for (WebElementFacade availableCar : availableCars) {
       if (!option.equals(
           availableCar.findElement(By.xpath(".//h3[@class='uitk-type-heading-500']")).getText())) {

@@ -1,2 +1,4 @@
-id;idFiltro;destinationPlace;startDate;endDate;checkInDate;checkOutDate;addAFlight;addACar;departurePlace
+id;filterId;destinationPlace;startDate;endDate;checkInDate;checkOutDate;addAFlight;addACar;departurePlace
 1;without adding another service;Medellin;;;May 2, 2021;May 1, 2021;false;false;
+2;with flight addition;Medellin;;;May 2, 2021;May 1, 2021;true;false;Bogota (BOG - El Dorado Intl.)
+3;with car addition;Medellin;;;May 2, 2021;May 1, 2021;false;true;

@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 public class CruiseReservation extends Reservation {
+
   public CruiseReservation(Map<String, String> cruisesReservation) {
     super(cruisesReservation);
   }

@@ -16,6 +16,7 @@ import io.cucumber.java.en.When;
 import java.io.IOException;
 
 public class ThingsToDoReservationStepDefinition {
+
   private ThingsToDoReservation thingsToDoReservation;
 
   @When("she searches for the required things to do {string}")

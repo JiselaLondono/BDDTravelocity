@@ -53,11 +53,10 @@ public class Utilities {
     return endDate.compareTo(currentDate) >= 1;
   }
 
-  public static boolean validateDate(String date, String date2, String format) {
+  public static boolean validateDates(String date, String date2, String format) {
     SimpleDateFormat dateFormat = new SimpleDateFormat(format);
     Date startDate = new Date();
     Date endDate = new Date();
-    Date currentDate = new Date(System.currentTimeMillis());
     try {
       endDate = dateFormat.parse(date);
       startDate = dateFormat.parse(date2);
@@ -87,15 +86,15 @@ public class Utilities {
 
   public static String getFutureOrPastDate(String date, String format, int days) {
     SimpleDateFormat dateFormat = new SimpleDateFormat(format);
-    Date d = new Date();
+    Date d;
+    Calendar calendar = new GregorianCalendar();
     try {
       d = dateFormat.parse(date);
+      calendar.setTime(d);
+      calendar.add(Calendar.DAY_OF_YEAR, days);
     } catch (ParseException e) {
       e.printStackTrace();
     }
-    Calendar calendar = new GregorianCalendar();
-    calendar.setTime(d);
-    calendar.add(Calendar.DAY_OF_YEAR, days);
     return (new SimpleDateFormat(format)).format(calendar.getTime());
   }
 }
