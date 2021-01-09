@@ -32,4 +32,8 @@ public class CarSearchFilters {
       Target.the("").locatedBy("//select[@aria-label='Preferred brand']");
   public static final Target DISCOUNT_TYPE_LIST =
       Target.the("").locatedBy("//select[@aria-label='Discount type']");
+  public static final Target CAR_FILTER =
+      Target.the("")
+          .locatedBy(
+              "//div[@class='s-x-padding-one']//legend[contains(text(), '{0}')]/..//div//input[@type='checkbox']/..//span[contains(text(), '{1}')]");
 }
