@@ -4,7 +4,7 @@ import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;
 
 public class FlightSearchFilters {
-  public static final Target TYPE_FLIGHT_BUTTON =
+  public static final Target FLIGHT_TYPE_BUTTON =
       Target.the("").locatedBy("//div[@class='uitk-tabs-inner-container']//span[text()='{0}']");
   public static final Target LEAVING_FROM_BUTTON =
       Target.the("").located(By.id("location-field-leg1-origin-menu"));

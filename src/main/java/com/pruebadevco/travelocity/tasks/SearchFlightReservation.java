@@ -4,9 +4,9 @@ import static com.pruebadevco.travelocity.userinterface.FlightSearchFilters.ADD_
 import static com.pruebadevco.travelocity.userinterface.FlightSearchFilters.ADD_HOTEL_CHECKBOX;
 import static com.pruebadevco.travelocity.userinterface.FlightSearchFilters.FLIGHT_CLASS_BUTTON;
 import static com.pruebadevco.travelocity.userinterface.FlightSearchFilters.FLIGHT_CLASS_LIST;
+import static com.pruebadevco.travelocity.userinterface.FlightSearchFilters.FLIGHT_TYPE_BUTTON;
 import static com.pruebadevco.travelocity.userinterface.FlightSearchFilters.GOING_TO_BUTTON;
 import static com.pruebadevco.travelocity.userinterface.FlightSearchFilters.LEAVING_FROM_BUTTON;
-import static com.pruebadevco.travelocity.userinterface.FlightSearchFilters.TYPE_FLIGHT_BUTTON;
 import static com.pruebadevco.travelocity.userinterface.GeneralFilters.CHECKIN_DATE_BUTTON;
 import static com.pruebadevco.travelocity.userinterface.GeneralFilters.CHECKOUT_DATE_BUTTON;
 import static com.pruebadevco.travelocity.userinterface.GeneralFilters.END_DATE_BUTTON;
@@ -34,7 +34,7 @@ public class SearchFlightReservation implements Task {
   @Override
   public <T extends Actor> void performAs(T actor) {
     actor.attemptsTo(
-        Click.on(TYPE_FLIGHT_BUTTON.of(flightReservation.getFlightType())),
+        Click.on(FLIGHT_TYPE_BUTTON.of(flightReservation.getFlightType())),
         Click.on(LEAVING_FROM_BUTTON),
         SearchPlace.named(flightReservation.getDeparturePlace()),
         Click.on(GOING_TO_BUTTON),
