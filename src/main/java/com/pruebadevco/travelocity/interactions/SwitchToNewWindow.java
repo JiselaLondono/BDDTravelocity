@@ -9,6 +9,7 @@ import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actions.Switch;
 
 public class SwitchToNewWindow implements Interaction {
+
   private int position;
 
   public SwitchToNewWindow(int position) {
@@ -18,7 +19,6 @@ public class SwitchToNewWindow implements Interaction {
   @Override
   public <T extends Actor> void performAs(T actor) {
     Set<String> a = BrowseTheWeb.as(actor).getDriver().getWindowHandles();
-
     actor.attemptsTo(Switch.toWindow(a.toArray()[position].toString()));
   }
 

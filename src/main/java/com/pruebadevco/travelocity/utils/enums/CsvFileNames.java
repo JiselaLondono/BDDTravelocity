@@ -4,7 +4,7 @@ public enum CsvFileNames {
   HOTEL_RESERVATION("hotel_reservation"),
   FLIGHT_RESERVATION("flight_reservation"),
   CAR_RESERVATION("car_reservation"),
-  THINGS_TO_DO_RESERVATION("things_to_do"),
+  THINGS_TO_DO_RESERVATION("things_to_do_reservation"),
   CRUISE_RESERVATION("cruise_reservation");
 
   private String value;

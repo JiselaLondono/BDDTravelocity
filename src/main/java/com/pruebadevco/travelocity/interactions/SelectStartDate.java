@@ -4,7 +4,9 @@ import static com.pruebadevco.travelocity.interactions.SelectEndDate.selectDate;
 import static com.pruebadevco.travelocity.userinterface.GeneralFilters.CALENDAR_MONTH;
 import static com.pruebadevco.travelocity.userinterface.GeneralFilters.NEXT_MONTH;
 import static com.pruebadevco.travelocity.utils.Constants.FULL_DATE_FORMAT;
-import static com.pruebadevco.travelocity.utils.Utilities.*;
+import static com.pruebadevco.travelocity.utils.Utilities.getCurrentDate;
+import static com.pruebadevco.travelocity.utils.Utilities.getMonthFromFullDate;
+import static com.pruebadevco.travelocity.utils.Utilities.validateStartDate;
 import static com.pruebadevco.travelocity.utils.enums.Months.getMonthNumber;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 

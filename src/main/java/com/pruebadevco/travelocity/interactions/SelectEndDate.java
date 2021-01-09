@@ -25,7 +25,7 @@ public class SelectEndDate implements Interaction {
 
   @Override
   public <T extends Actor> void performAs(T actor) {
-    if (validateDate(endDate, startDate, FULL_DATE_FORMAT)) {
+    if (validateDates(endDate, startDate, FULL_DATE_FORMAT)) {
       if (validateEndDate(endDate, FULL_DATE_FORMAT)) {
         int month = getMonthNumber(CALENDAR_MONTH.resolveFor(actor).getText());
         while (month != getMonthFromFullDate(endDate, FULL_DATE_FORMAT)) {

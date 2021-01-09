@@ -10,6 +10,7 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 
 public class SelectActivity implements Interaction {
+
   private String activity;
 
   public SelectActivity(String activity) {

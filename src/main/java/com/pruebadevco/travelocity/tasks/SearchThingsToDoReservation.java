@@ -15,6 +15,7 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 
 public class SearchThingsToDoReservation implements Task {
+
   private ThingsToDoReservation thingsToDoReservation;
 
   public SearchThingsToDoReservation(ThingsToDoReservation thingsToDoReservation) {

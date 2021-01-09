@@ -14,6 +14,7 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.SelectFromOptions;
 
 public class SearchCruiseReservation implements Task {
+
   private CruiseReservation cruiseReservation;
 
   public SearchCruiseReservation(CruiseReservation cruiseReservation) {
